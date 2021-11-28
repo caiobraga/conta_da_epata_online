@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -27,12 +28,41 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>conta_da_epata_online</title>
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+  <script>
+    const firebaseConfig = {
+
+      apiKey: "AIzaSyD4uCeCParW_8f8dlvxDEDJdPdQYBm0wfw",
+
+      authDomain: "conta-da-epata-online.firebaseapp.com",
+
+      projectId: "conta-da-epata-online",
+
+      storageBucket: "conta-da-epata-online.appspot.com",
+
+      messagingSenderId: "848401983970",
+
+      appId: "1:848401983970:web:b26c34c172d070e7cc71bb",
+
+      measurementId: "G-S7VTVQ63QD"
+
+    };
+
+
+    // Initialize Firebase
+
+    const app = initializeApp(firebaseConfig);
+
+    const analytics = getAnalytics(app);
+  </script>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
@@ -101,4 +131,5 @@
     }
   </script>
 </body>
+
 </html>
