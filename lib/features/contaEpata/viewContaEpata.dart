@@ -65,25 +65,30 @@ class ViewContaEpata extends View<ViewModelContaEpata, ViewActionsContaEpata> {
         child: CircularProgressIndicator(),
       );
     } else {
-      return Center(
-          child: ListView(
-        children: [
-          Column(
-            children: [
-              OutputView(context, viewModel: viewModel!, viewActions: viewActions),
-              InputView(
-                context,
-                viewActions: viewActions,
-                viewModel: viewModel!,
-              ),
-              ComoCalcularNumeroEpataView(context),
-              ComoCalcularEpataView(context),
-              SobreView(context),
-              HistoriaView(context),
-            ],
-          ),
+      return Column(
+        children: <Widget>[
+          Expanded(
+            child: ListView(
+              children: [
+                Column(
+                  children: [
+                    OutputView(context, viewModel: viewModel!, viewActions: viewActions),
+                    InputView(
+                      context,
+                      viewActions: viewActions,
+                      viewModel: viewModel!,
+                    ),
+                    ComoCalcularNumeroEpataView(context),
+                    ComoCalcularEpataView(context),
+                    SobreView(context),
+                    HistoriaView(context),
+                  ],
+                ),
+              ],
+            ),
+          )
         ],
-      ));
+      );
     }
   }
 }
