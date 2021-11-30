@@ -66,24 +66,20 @@ class ViewContaEpata extends View<ViewModelContaEpata, ViewActionsContaEpata> {
       );
     } else {
       return Column(
-        children: <Widget>[
+        children: [
           Expanded(
             child: ListView(
               children: [
-                Column(
-                  children: [
-                    OutputView(context, viewModel: viewModel!, viewActions: viewActions),
-                    InputView(
-                      context,
-                      viewActions: viewActions,
-                      viewModel: viewModel!,
-                    ),
-                    ComoCalcularNumeroEpataView(context),
-                    ComoCalcularEpataView(context),
-                    SobreView(context),
-                    HistoriaView(context),
-                  ],
+                OutputView(context, viewModel: viewModel!, viewActions: viewActions),
+                InputView(
+                  context,
+                  viewActions: viewActions,
+                  viewModel: viewModel!,
                 ),
+                ComoCalcularNumeroEpataView(context),
+                ComoCalcularEpataView(context),
+                SobreView(context),
+                HistoriaView(context),
               ],
             ),
           )

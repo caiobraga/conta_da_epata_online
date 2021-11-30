@@ -8,15 +8,15 @@ const RESOURCES = {
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "version.json": "5e034cc09476ffccc381095d190351bc",
-"index.html": "e33cebdbc6de6b853534732e28005e30",
-"/": "e33cebdbc6de6b853534732e28005e30",
+"index.html": "14a3eb7d24fc6faad2fdaddc81bf6aab",
+"/": "14a3eb7d24fc6faad2fdaddc81bf6aab",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/NOTICES": "f4b85fb23a658e449f8425b412452115",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
 "manifest.json": "ca6c87a1e678d62dca6e875a46ba6dc4",
-"main.dart.js": "120c0aaea6052b9ec42764d985e7f64b",
+"main.dart.js": "699852495ec6de4e4206756c32c18697",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796"
 };
 
