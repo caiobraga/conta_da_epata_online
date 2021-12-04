@@ -7,11 +7,13 @@ class ViewModelContaEpata extends ViewModel {
   final String descricao;
   final TextEditingController controlerFieldData = TextEditingController();
   final int numeroEpata;
+  final List<String> memoriaDeCalculo;
 
   ViewModelContaEpata({
     required this.dataAtual,
     required this.urlDaLua,
     required this.descricao,
     required this.numeroEpata,
+    required this.memoriaDeCalculo,
   }) : super();
 }

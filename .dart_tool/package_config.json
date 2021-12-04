@@ -74,8 +74,8 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "google_mobile_ads",
-      "rootUri": "file:///home/caio/.pub-cache/hosted/pub.dartlang.org/google_mobile_ads-1.0.0",
+      "name": "intl",
+      "rootUri": "file:///home/caio/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -212,7 +212,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2021-11-28T03:00:43.373751Z",
+  "generated": "2021-12-03T23:47:55.394803Z",
   "generator": "pub",
   "generatorVersion": "2.15.0-188.0.dev"
 }

@@ -4,6 +4,7 @@ import 'package:conta_da_epata_online/config.dart';
 import 'package:conta_da_epata_online/features/contaEpata/views/comoCalcularEpata.dart';
 import 'package:conta_da_epata_online/features/contaEpata/views/comoCalcularNumeroEpata.dart';
 import 'package:conta_da_epata_online/features/contaEpata/views/historia.dart';
+import 'package:conta_da_epata_online/features/contaEpata/views/memoriaCalculo.dart';
 import 'package:conta_da_epata_online/features/contaEpata/views/outputView.dart';
 import 'package:conta_da_epata_online/features/contaEpata/views/sobre.dart';
 import 'package:flutter/cupertino.dart';
@@ -65,10 +66,42 @@ class ViewContaEpata extends View<ViewModelContaEpata, ViewActionsContaEpata> {
         child: CircularProgressIndicator(),
       );
     } else {
-      return Column(
+      return DefaultTextStyle(
+        style: Theme.of(context).textTheme.bodyText2!,
+        child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints viewportConstraints) {
+            return SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: viewportConstraints.maxHeight,
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    OutputView(context, viewModel: viewModel!, viewActions: viewActions),
+                    InputView(
+                      context,
+                      viewActions: viewActions,
+                      viewModel: viewModel!,
+                    ),
+                    MemoriaCalculoView(context, viewModel: viewModel!, viewActions: viewActions),
+                    ComoCalcularNumeroEpataView(context),
+                    ComoCalcularEpataView(context),
+                    SobreView(context),
+                    HistoriaView(context),
+                  ],
+                ),
+              ),
+            );
+          },
+        ),
+      );
+
+      /*Column(
         children: [
           Expanded(
-            child: ListView(
+            child: Container(child: ListView(
               children: [
                 OutputView(context, viewModel: viewModel!, viewActions: viewActions),
                 InputView(
@@ -76,15 +109,16 @@ class ViewContaEpata extends View<ViewModelContaEpata, ViewActionsContaEpata> {
                   viewActions: viewActions,
                   viewModel: viewModel!,
                 ),
+                MemoriaCalculoView(context, viewModel: viewModel!, viewActions: viewActions),
                 ComoCalcularNumeroEpataView(context),
                 ComoCalcularEpataView(context),
                 SobreView(context),
                 HistoriaView(context),
               ],
-            ),
+            ),,),
           )
         ],
-      );
+      );*/
     }
   }
 }

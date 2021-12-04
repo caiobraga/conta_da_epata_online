@@ -20,7 +20,7 @@ class ComoCalcularNumeroEpataView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Como calcular o número da Epata",
+              "Origem do cálculo",
               style: TextStyle(fontSize: 20),
             ),
           ],

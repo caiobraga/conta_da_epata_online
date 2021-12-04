@@ -79,13 +79,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  google_mobile_ads:
+  intl:
     dependency: "direct main"
     description:
-      name: google_mobile_ads
+      name: intl
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "0.17.0"
   js:
     dependency: transitive
     description:

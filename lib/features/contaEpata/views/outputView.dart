@@ -29,8 +29,8 @@ class OutputView extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 30.0, bottom: 15.0),
                 child: Image.asset(
                   viewModel.urlDaLua,
-                  width: 400,
-                  height: 400,
+                  width: 300,
+                  height: 300,
                   fit: BoxFit.fill,
                 ),
               ),
