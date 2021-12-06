@@ -2,6 +2,7 @@ import 'package:conta_da_epata_online/features/contaEpata/presenterContaEpata.da
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:conta_da_epata_online/config.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,6 +32,9 @@ class _MyApp extends State<MyApp> {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     return MaterialApp(
       title: 'Conta da Epata online',
+      navigatorObservers: [
+        routeObserver,
+      ],
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       themeMode: currentTheme.currentTheme(),

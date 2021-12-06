@@ -4,6 +4,7 @@ import 'package:conta_da_epata_online/features/contaEpata/viewActionsContaEpata.
 import 'package:conta_da_epata_online/features/contaEpata/viewModelContaEpata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 
 class OutputView extends StatelessWidget {
   final ViewModelContaEpata viewModel;
@@ -27,14 +28,21 @@ class OutputView extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 30.0, bottom: 15.0),
-                child: Image.asset(
-                  viewModel.urlDaLua,
-                  width: 300,
-                  height: 300,
-                  fit: BoxFit.fill,
+                child: ImageRenderer(
+                  alt: 'imagem da lua atual ${viewModel.urlDaLua}',
+                  link: 'https://flutter.dev/assets/images/shared/brand/flutter/logo/flutter-lockup.png',
+                  child: Image.asset(
+                    viewModel.urlDaLua,
+                    width: 300,
+                    height: 300,
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
-              Text(viewModel.descricao),
+              TextRenderer(
+                element: ParagraphElement(),
+                text: Text(viewModel.descricao),
+              ),
               Padding(
                 padding: const EdgeInsets.only(
                   top: 30.0,

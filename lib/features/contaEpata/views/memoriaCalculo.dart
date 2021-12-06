@@ -4,6 +4,7 @@ import 'package:conta_da_epata_online/features/contaEpata/viewActionsContaEpata.
 import 'package:conta_da_epata_online/features/contaEpata/viewModelContaEpata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 
 class MemoriaCalculoView extends StatelessWidget {
   final ViewModelContaEpata viewModel;
@@ -24,9 +25,12 @@ class MemoriaCalculoView extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              "Como chegamos a esse resultado",
-              style: TextStyle(fontSize: 20),
+            TextRenderer(
+              element: ParagraphElement(),
+              text: Text(
+                "Como chegamos a esse resultado",
+                style: TextStyle(fontSize: 20),
+              ),
             ),
           ],
         ),
@@ -35,16 +39,19 @@ class MemoriaCalculoView extends StatelessWidget {
           child: Align(
             child: Column(
               children: [
-                Text(
-                  viewModel.memoriaDeCalculo.join("\n"),
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontFamily: "Roboto",
+                TextRenderer(
+                  element: ParagraphElement(),
+                  text: Text(
+                    viewModel.memoriaDeCalculo.join("\n"),
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontFamily: "Roboto",
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                    softWrap: false,
+                    maxLines: 20,
+                    textAlign: TextAlign.justify,
                   ),
-                  overflow: TextOverflow.ellipsis,
-                  softWrap: false,
-                  maxLines: 20,
-                  textAlign: TextAlign.justify,
                 ),
               ],
             ),

@@ -4,6 +4,7 @@ import 'package:conta_da_epata_online/features/contaEpata/viewActionsContaEpata.
 import 'package:conta_da_epata_online/features/contaEpata/viewModelContaEpata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 
 class InputView extends StatelessWidget {
   final ViewModelContaEpata viewModel;
@@ -40,8 +41,11 @@ class InputView extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 8.0, bottom: 50.0),
           child: CupertinoButton(
-            child: Text(
-              "Selecione uma data",
+            child: TextRenderer(
+              element: ParagraphElement(),
+              text: Text(
+                "Selecione uma data",
+              ),
             ),
             onPressed: () {
               _selectDate(context);

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:html';
 
 import 'package:conta_da_epata_online/config.dart';
 import 'package:conta_da_epata_online/features/contaEpata/views/comoCalcularEpata.dart';
@@ -10,6 +11,7 @@ import 'package:conta_da_epata_online/features/contaEpata/views/sobre.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:conta_da_epata_online/framework/view.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 import 'viewActionsContaEpata.dart';
 import 'viewModelContaEpata.dart';
 import './views/inputView.dart';
@@ -39,11 +41,14 @@ class ViewContaEpata extends View<ViewModelContaEpata, ViewActionsContaEpata> {
                 fit: BoxFit.fill,
               ),
             ),
-            Text(
-              "Conta da Epata online",
-              style: TextStyle(
-                fontSize: 20,
-                fontFamily: "Roboto",
+            TextRenderer(
+              element: ParagraphElement(),
+              text: Text(
+                "Conta da Epata online",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontFamily: "Roboto",
+                ),
               ),
             ),
           ],
@@ -97,28 +102,6 @@ class ViewContaEpata extends View<ViewModelContaEpata, ViewActionsContaEpata> {
           },
         ),
       );
-
-      /*Column(
-        children: [
-          Expanded(
-            child: Container(child: ListView(
-              children: [
-                OutputView(context, viewModel: viewModel!, viewActions: viewActions),
-                InputView(
-                  context,
-                  viewActions: viewActions,
-                  viewModel: viewModel!,
-                ),
-                MemoriaCalculoView(context, viewModel: viewModel!, viewActions: viewActions),
-                ComoCalcularNumeroEpataView(context),
-                ComoCalcularEpataView(context),
-                SobreView(context),
-                HistoriaView(context),
-              ],
-            ),,),
-          )
-        ],
-      );*/
     }
   }
 }

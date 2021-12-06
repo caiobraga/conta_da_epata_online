@@ -116,6 +116,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "seo_renderer",
+      "rootUri": "file:///home/caio/.pub-cache/hosted/pub.dartlang.org/seo_renderer-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///home/caio/Downloads/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -212,7 +218,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2021-12-03T23:47:55.394803Z",
+  "generated": "2021-12-06T21:34:41.310693Z",
   "generator": "pub",
   "generatorVersion": "2.15.0-188.0.dev"
 }
